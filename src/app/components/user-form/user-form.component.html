@@ -1,0 +1,24 @@
+<div class="col-md-6-offset-md-2">
+    <div class="card">
+        <div class="card-body">
+            <form>
+                <div class="form-group">
+                    <input type="text" name="name" [(ngModel)]="user.name" placeholder="name" class="form-control" autofocus>
+                </div>
+                <div class="form-group">
+                    <input type="text" name="country"  [(ngModel)]="user.country" placeholder="country" class="form-control" autofocus>
+                </div>
+                <button class="btn btn-success btn-block" (click)="saveNewUser()">
+                    Save
+                </button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<div class="col-md-6-offset-md-2">
+    <div class="card card-body text-center">
+        <h2>{{ user.name == '' ? 'Name' : user.name }}</h2>
+        <strong>{{ user.country == '' ? 'Country' : user.country}}</strong>
+    </div>
+</div>
